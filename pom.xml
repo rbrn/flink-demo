@@ -117,7 +117,7 @@ under the License.
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongo-java-driver</artifactId>
-            <version>3.7.1</version>
+            <version>3.12.0</version>
         </dependency>
         <!-- explicitly add a standard logging framework, as Flink does not have
             a hard dependency on one specific framework by default -->
@@ -188,7 +188,7 @@ under the License.
                 <dependency>
                     <groupId>org.mongodb</groupId>
                     <artifactId>mongo-java-driver</artifactId>
-                    <version>3.7.1</version>
+                    <version>3.12.0</version>
                     <scope>provided</scope>
                 </dependency>
             </dependencies>
@@ -236,6 +236,7 @@ under the License.
                                                 implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                             <mainClass>com.flink.demo.MongdbJob</mainClass>
                                         </transformer>
+                                        <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                     </transformers>
                                 </configuration>
                             </execution>
